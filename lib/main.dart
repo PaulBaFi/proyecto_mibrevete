@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:proyecto_mibrevete/pages/alumno/alumno_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -45,7 +46,10 @@ class _HomePageState extends State<HomePage> {
                           width: 250,
                         ),
                         SizedBox(height: 100),
-                        homeButton('ALUMNOS'),
+                        homeButton('ALUMNOS', onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => AlumnoPage()));
+                        }),
                         SizedBox(height: 10),
                         homeButton('INSTRUCTORES'),
                         SizedBox(height: 10),
@@ -58,9 +62,12 @@ class _HomePageState extends State<HomePage> {
             )));
   }
 
-  OutlinedButton homeButton(String title) {
+  OutlinedButton homeButton(String title, {Function()? onPressed}) {
     return OutlinedButton(
-        onPressed: () {},
+        onPressed: () {
+                                    Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => AlumnoPage()));
+        },
         style: OutlinedButton.styleFrom(
             minimumSize: Size(350, 60),
             foregroundColor: Colors.white,
