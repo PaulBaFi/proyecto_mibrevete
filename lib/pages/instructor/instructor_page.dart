@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_mibrevete/components/appbar_custom.dart';
 
 class InstructorPage extends StatefulWidget {
   const InstructorPage({super.key});
@@ -11,10 +12,15 @@ class _InstructorPageState extends State<InstructorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Instructores'),
+      body: Column(
+        children: <Widget>[
+          AppBarCustom(
+            title: 'Instructores',
+            placeholder: 'Buscar instructor..',
+          ),
+          Text('Instructores'),
+        ],
       ),
-      body: Center(child: Text('Página de Instructores')),
     );
   }
 }

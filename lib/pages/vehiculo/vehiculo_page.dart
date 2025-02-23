@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_mibrevete/components/appbar_custom.dart';
 
 class VehiculoPage extends StatefulWidget {
   const VehiculoPage({super.key});
@@ -11,10 +12,15 @@ class _VehiculoPageState extends State<VehiculoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Vehículos'),
+      body: Column(
+        children: <Widget>[
+          AppBarCustom(
+            title: 'Vehículos',
+            placeholder: 'Buscar vehículo..',
+          ),
+          Text('Vehículos')
+        ],
       ),
-      body: Center(child: Text('Página de Vehículos')),
     );
   }
 }

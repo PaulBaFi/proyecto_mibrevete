@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_mibrevete/utils.dart';
+import 'package:proyecto_mibrevete/components/appbar_custom.dart';
 
 class AlumnoPage extends StatefulWidget {
   const AlumnoPage({super.key});
@@ -13,7 +13,10 @@ class _AlumnoPageState extends State<AlumnoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: <Widget>[
-      AppBarCustom(),
+      AppBarCustom(
+        title: 'Alumnos',
+        placeholder: 'Buscar alumno..',
+      ),
       Container(
         margin: const EdgeInsets.symmetric(vertical: 0),
         height: 650,
@@ -77,85 +80,5 @@ class _AlumnoPageState extends State<AlumnoPage> {
         ),
       ),
     ]));
-  }
-}
-
-class AppBarCustom extends StatefulWidget {
-  const AppBarCustom({super.key});
-
-  @override
-  State<AppBarCustom> createState() => _AppBarCustomState();
-}
-
-class _AppBarCustomState extends State<AppBarCustom> {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        ClipPath(
-          clipper: CustomAppBarClipper(),
-          child: Container(
-            height: 200,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Colors.yellow, Colors.deepOrange, Colors.deepOrange],
-              ),
-            ),
-            padding: EdgeInsets.only(top: 50, left: 20, right: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.white,
-                        size: 24,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Alumno',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10),
-                //Barra de busqueda
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Buscar alumno..',
-                      border: InputBorder.none,
-                      icon: Icon(
-                        Icons.search,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
   }
 }
