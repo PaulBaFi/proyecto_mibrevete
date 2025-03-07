@@ -1,16 +1,44 @@
-# proyecto_mibrevete
+# Mi Brevete - Pisco 🚗
 
-A new Flutter project.
+Aplicación móvil desarrollada en **Flutter** con **MySQL** como base de datos, diseñada para gestionar alumnos, instructores y vehículos en una escuela de manejo.
 
-## Getting Started
+## 📌 Características
 
-This project is a starting point for a Flutter application.
+- Registro y gestión de alumnos e instructores.
+- Administración de vehículos disponibles para la escuela de manejo.
+- Control de pagos y estados de los alumnos.
+- Generación y gestión de reportes de clases prácticas.
+- Sistema de evaluación y puntajes para los alumnos.
+- Filtrado y actualización de registros.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tecnologías utilizadas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** (Framework para desarrollo móvil)
+- **Dart** (Lenguaje de programación)
+- **MySQL** (Base de datos relacional)
+- **PHP** (Backend para la gestión de datos)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📌 Instalación y configuración
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/PaulBaFi/proyecto_mibrevete.git
+cd proyecto_mibrevete
+```
+
+### 2️⃣ Instalar dependencias
+
+```bash
+flutter pub get
+```
+
+### 3️⃣ Ejecutar el proyecto
+
+```bash
+flutter run
+```
+
+## 🚀 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si deseas colaborar, por favor abre un issue o envía un pull request.
